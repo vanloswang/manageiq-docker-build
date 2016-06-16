@@ -4,7 +4,7 @@ MAINTAINER Vanlos Wang vanloswang@126.com
 RUN echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
     apk update && apk add curl "postgresql@edge<9.6" "postgresql-contrib@edge<9.6" && \
     mkdir /docker-entrypoint-initdb.d && \
-    curl -o /usr/local/bin/gosu -sSL "https://github.com/tianon/gosu/releases/download/1.2/gosu-amd64" && \
+    curl -o /usr/local/bin/gosu -sSL "https://github.com/tianon/gosu/releases/download/1.9/gosu-amd64" && \
     chmod +x /usr/local/bin/gosu && \
     apk del curl && \
     rm -rf /var/cache/apk/*
